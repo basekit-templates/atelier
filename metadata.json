@@ -22,7 +22,7 @@
         }
     },
     "fontSwatch": {
-       "title": "Rubik",
+       "title": "Rubik & Playfair Display",
         "font1": {
             "font-family": "\"Playfair Display\", Times New Roman, serif",
             "font-size": "32px",
@@ -164,13 +164,13 @@
             "color__footer--background" : "#1e1e1e"
         },
         "navigation": {
+            "color__navigation--text": "#919191",
+            "color__navigation--text--selected": "#202020",
             "font__navigation--font-family": "\"Playfair Display\", Times New Roman, serif",
             "font__navigation--font-size": "28px",
             "font__navigation--font-weight": "400",
             "font__navigation--line-height": "36px",
-            "font__navigation--letter-spacing": "1px",
-            "color__navigation--text": "#919191",
-            "color__navigation--text--selected": "#202020"
+            "font__navigation--letter-spacing": "1px"
         },
         "form": {
             "color__form-legend--text" : "#1e1e1e",
@@ -214,29 +214,19 @@
         },
         "feature": {
             "color__feature--background": "#fff",
+            "color__feature-content--background": "#fff",
+            "color__feature-headline--text" : "@color__h2--text",
+            "color__feature-strapline--text" : "#A2A1A1",
             "font__feature-headline--font-family" : "\"Playfair Display\", Times New Roman, serif",
             "font__feature-headline--font-size" : "56px",
             "font__feature-headline--font-weight" : "300",
             "font__feature-headline--line-height" : "62px",
-            "color__feature-headline--text" : "@color__h2--text",
             "font__feature-headline--letter-spacing": "0px",
             "font__feature-strapline--font-family" : "\"Rubik\", Geneva, \"Lucida Console\", sans-serif",
             "font__feature-strapline--font-size" : "18px",
             "font__feature-strapline--font-weight" : "400",
             "font__feature-strapline--line-height" : "32px",
-            "font__feature-strapline--letter-spacing" : "0px",
-            "color__feature-strapline--text" : "#A2A1A1",
-            "color__feature-content--background": "#fff"
-        },
-        "menu": {
-            "color__menusections--background" : "@color__secondary",
-            "color__menu--background" : "@color__secondary",
-            "color__menu-section-header--background" : "@color__secondary",
-            "color__menu-section-featured--background" : "@color__secondary"
-        },
-        "blog": {
-            "color__blogsearch-legend--background" : "#fff",
-            "color__blogsearch-legend--text" : "#fff"
+            "font__feature-strapline--letter-spacing" : "0px"
         },
         "ecommerce": {
             "color__ecomproduct-price--text" : "#919191"

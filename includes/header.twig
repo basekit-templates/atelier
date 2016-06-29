@@ -1,0 +1,34 @@
+<!-- Company Name and Logo -->
+ <header class="template-header">
+
+
+    <!-- Navigation -->
+    {{widget('extendednavigation', 'navigation', {'align': 'left'})|raw}}
+
+
+    <!-- Navigation Icon -->
+    {% include "includes/nav-icon.twig" %}
+
+
+    <div class="template-header--brand">
+        {{widget('logo', 'header-logo', {"defaultlogo": asset('images/logo.png'), "showTplWidget":"0"})|raw}}
+        {{widget('companyname', 'header-companyname', {"business": "profile"})|raw}}
+    </div>
+
+
+    {{widget('ecombasket', 'shopbasket', {})|raw}}
+
+
+    <!-- Ecommerce Basket -->
+    {% if plugins.blog.live and plugins.ecommerce.store.live == false %}
+        {{widget('ecombasket', 'shopbasket', {})|raw}}
+    {% endif %}
+
+
+    <!-- Blog Search -->
+    {% if plugins.ecommerce.store.live and plugins.blog.live == false %}
+        {{widget('blogsearch', 'blogsearch', {})|raw}}
+    {% endif %}
+
+
+</header>

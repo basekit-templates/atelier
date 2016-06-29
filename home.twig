@@ -1,0 +1,168 @@
+{% extends "layout.twig" %}
+{% block content %}
+
+
+<!-- Navigation Container -->
+<div class="home-page">
+    <div class="template-feature">
+
+
+            <!-- Slideshow Widget
+            {{widget('responsiveslideshow', 'slideshow', {
+                'duration':'5',
+                'transSpeed': '800',
+                'transType': 'fade',
+                'showButtons': false,
+                'showBullets': true,
+                'allowPause': false,
+                'allowLoop': false,
+                'crop': true,
+                'images':[
+            {
+                'imageHeight':'auto',
+                'imageWidth':'100%',
+                'url':asset('images/slideshow-1.jpg')
+            },
+            {
+                'imageHeight':'auto',
+                'imageWidth':'100%',
+                'url':asset('images/slideshow-2.jpg')
+            }
+
+            ]})|raw}}-->
+
+            <div id="page-zones__template-widgets__responsiveslideshow-slideshow" class="widget  widget--template-widget" data-widget-type="responsiveslideshow" data-uniqueid="page-zones__template-widgets__responsiveslideshow-slideshow">
+
+
+
+
+<div class="bk-responsiveslideshow  responsiveslideshow  widget__responsiveslideshow">
+
+
+    <ul class="slides-list  responsiveslideshow__slides-list  cover" itemscope="" itemtype="https://schema.org/ImageGallery">
+
+
+
+
+
+
+
+
+        <li data-ref="0" class="slide-item  responsiveslideshow__slide-item  responsiveslideshow-image-item  js-responsiveslideshow-image-item" style="display: none;">
+
+                        <figure class="figure  responsiveslideshow__figure  landscape" style="background-image:url('http://files.product.basekit.technology/product-basekit-technology742/image/slideshow-1.jpg');" itemprop="associatedMedia" itemscope="" itemtype="https://schema.org/ImageObject">
+
+                                <img class="image  responsiveslideshow__image  js-responsiveslideshow-image" src="//files.product.basekit.technology/product-basekit-technology742/image/slideshow-1.jpg" alt="Lorem ipsum dolor" itemprop="contentUrl">
+
+                                                <figcaption class="caption  responsiveslideshow__caption">
+
+
+                                        <span class="image-title  responsiveslideshow__image-title" itemprop="name">Lorem ipsum dolor</span>
+
+
+
+                                        <span class="image-description  responsiveslideshow__image-description" itemprop="description">Image description. Cras a ornare sapien, at pharetra est.</span>
+
+
+                </figcaption>
+
+            </figure>
+
+        </li>
+
+
+
+
+
+
+
+
+        <li data-ref="1" class="slide-item  responsiveslideshow__slide-item  responsiveslideshow-image-item  js-responsiveslideshow-image-item current">
+
+                        <figure class="figure  responsiveslideshow__figure  landscape" style="background-image:url('http://files.product.basekit.technology/product-basekit-technology742/image/slideshow-2.jpg');" itemprop="associatedMedia" itemscope="" itemtype="https://schema.org/ImageObject">
+
+                                <img class="image  responsiveslideshow__image  js-responsiveslideshow-image" src="//files.product.basekit.technology/product-basekit-technology742/image/slideshow-2.jpg" alt="Lorum ipsum dolor" itemprop="contentUrl">
+
+                                                <figcaption class="caption  responsiveslideshow__caption">
+
+
+                                        <span class="image-title  responsiveslideshow__image-title" itemprop="name">Lorum ipsum dolor</span>
+
+
+
+                                        <span class="image-description  responsiveslideshow__image-description" itemprop="description">Cras a ornare sapien, at pharetra est nam semper corper lorem</span>
+
+
+                </figcaption>
+
+            </figure>
+
+        </li>
+
+
+    </ul>
+
+
+
+                    <nav class="slide-navigation  responsiveslideshow__slide-navigation">
+                            <button class="previous-button  button  icon  icon--previous  responsiveslideshow__previous-button js-btn-prev js-slide-ctrl" data-ref="1">
+                    <span class="control-text  responsiveslideshow__control-text">Previous</span>
+                </button>
+
+
+                <button class="pause-toggle  button  icon  icon--pause  responsiveslideshow__pause-toggle js-btn-play  pause" data-ref="0">
+                    <span class="control-text  responsiveslideshow__control-text">Pause</span>
+                </button>
+
+
+                            <button class="next-button  button  icon  icon--next  responsiveslideshow__next-button js-btn-next js-slide-ctrl disabled" data-ref="1" disabled="disabled">
+                    <span class="control-text  responsiveslideshow__control-text">Next</span>
+                </button>
+                        </nav>
+
+
+                    <nav class="slide-pagination  responsiveslideshow__slide-pagination">
+            <ul class="pagination-list  responsiveslideshow__pagination-list">
+
+                                                                                                            <li data-ref="0" class="pagination-item  responsiveslideshow__pagination-item js-dot js-slide-ctrl">
+                            <button class="button  button--pagination  responsiveslideshow__button">1</button>
+                        </li>
+
+                                                                                                            <li data-ref="1" class="pagination-item  responsiveslideshow__pagination-item js-dot js-slide-ctrl selected">
+                            <button class="button  button--pagination  responsiveslideshow__button">2</button>
+                        </li>
+                                                    </ul>
+        </nav>
+
+
+
+</div>
+
+</div>
+
+
+            <!-- Header -->
+            {% include "includes/header.twig" %}
+
+
+            <a href="#main"  class="feature-scroll"></a>
+
+
+        </div>
+
+
+        <div role="main">
+
+            <!-- Main Zone -->
+            {{zone('main')|raw}}
+
+        </div>
+
+
+        <!-- Footer -->
+        {% include "includes/footer.twig" %}
+
+
+</div>
+
+{% endblock %}

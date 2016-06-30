@@ -8,6 +8,7 @@
     position: relative;
 }
 
+
 .feature-scroll {
     background-color: white;
     -webkit-box-shadow: 0px 0px 125px 0px rgba(0,0,0,0.035);
@@ -61,6 +62,8 @@
 
 //  If the pagination and slider buttons are both present, hide the pagination on mobile
 .template-feature.hide-slide-pagination  .responsiveslideshow {
+
+
     &__slide-pagination {
 
         @media @tablet-860px {
@@ -100,6 +103,7 @@
 // Home slideshow styling
 .template-feature .responsiveslideshow {
 
+
     &__figure {
         background-color: transparent;
         background-repeat: no-repeat;
@@ -127,7 +131,7 @@
 
     // Adds subtle dark overlay to slideshow images
     &__slides-list {
-        background-color: rgba(0,0,0, 0.25);
+        background-color: @color__slideshow-caption--background;
         content: "";
         position: relative;
     }
@@ -170,6 +174,7 @@
         font-family: @font__feature-strapline--font-family;
         font-size: @font__feature-strapline--font-size;
         font-weight: @font__feature-strapline--font-weight;
+        letter-spacing: @font__feature-strapline--letter-spacing;
         line-height: @font__feature-strapline--line-height;
         text-transform: none;
 
@@ -211,8 +216,8 @@
         @media @tablet-860px {
             .flex-display;
             .justify-content(space-between);
-            background-color: @color__feature--background;
-            border-top: 1px solid darken(@color__feature--background, 8%);
+            /*background-color: @color__feature--background;
+            border-top: 1px solid darken(@color__feature--background, 8%);*/
             bottom: 20px;
             left: 25px;
             right: 25px;
@@ -260,7 +265,7 @@
         .transition(all 0.5s ease-in-out);
 
         @media @tablet-860px {
-            border-right: 1px solid darken(@color__feature--background, 10%);
+            //border-right: 1px solid darken(@color__feature--background, 10%);
         }
 
         &:after {
@@ -281,7 +286,7 @@
         .transition(all 0.5s ease-in-out);
 
         @media @tablet-860px {
-            border-left: 1px solid darken(@color__feature--background, 10%);
+           //border-left: 1px solid darken(@color__feature--background, 10%);
             margin-left: 0;
         }
 
@@ -290,7 +295,7 @@
         }
 
         &:hover:after {
-            border-color: @color__secondary;
+            //border-color: @color__secondary;
             right: 25px;
             .transition(all 0.5s ease-in-out);
         }
@@ -377,7 +382,7 @@
     height: 16px;
 
     @media @tablet-860px {
-        border-left: 14px solid darken(@color__feature--background, 80%);
+        //border-left: 14px solid darken(@color__feature--background, 80%);
         border-right: 0;
         left: 0;
         top: 16px;
@@ -397,7 +402,7 @@
     margin: 0 auto;
 
     @media @tablet-860px {
-        border-color: darken(@color__feature--background, 80%);
+        //border-color: darken(@color__feature--background, 80%);
         border-width: 2px;
         left: 0;
     }
@@ -423,7 +428,7 @@
         width: 12px;
 
         @media @tablet-860px {
-            border-color: darken(@color__feature--background, 80%);
+            //border-color: darken(@color__feature--background, 80%);
             border-width: 2px;
             left: 0;
             right: 0;

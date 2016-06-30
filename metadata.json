@@ -195,7 +195,7 @@
             "color__slideshow-title--text": "#ffffff",
             "color__slideshow-description--text": "#bebebe",
             "color__slideshow-pagination-item--background": "#ffffff",
-            "color__slideshow-pagination-item--background--selected": "@color__link-text"
+            "color__slideshow-pagination-item--background--selected": "@color__link--text"
         },
         "image": {
             "color__image-caption--background": "rgba(0,0,0, 0.5)",

@@ -25,16 +25,18 @@
 // If the blog post has an image apply these styles
 .post-article--has-image {
 
+
     // Use the background image
     .image-link {
         background-color: transparent;
         background-size: cover;
         background-position: center center;
         position: absolute;
+        left: 0;
         right: 0;
         height: 650px;
-        height: 100vh;
-        width: 55%;
+        height: 95vh;
+        width: 100%;
         .transition(none);
 
         @media (max-height: 800px) {
@@ -60,7 +62,7 @@
             right: 0;
             left: 0;
             height: 650px;
-            height: 100vh;
+            height: 95vh;
 
             @media (max-height: 800px) {
                 height: 650px;
@@ -73,21 +75,24 @@
         }
     }
 
+
     // Hide the inline image
     .image {
         display: none;
         visibility: hidden;
     }
 
+
     // Position the blog post title over the image
     .post-header {
         position: absolute;
         top: 0;
-        width: 45%;
+        width: 100%;
         height: 650px;
-        height: 100vh;
+        height: 95vh;
         bottom: 0;
         left: 0;
+        right: 0;
         text-align: center;
         .flex-display;
         .align-items(center);
@@ -111,13 +116,10 @@
         }
     }
 
-    .post-body {
-        max-width: 860px;
-    }
 
     // Post title text styling if image is available
     .post-title {
-        color: @color__h1--text;
+        color: @color__slideshow-title--text;;
         font-family: @font__h1--font-family;
         font-size: bkscale(@font__h1--font-size, 1.1);
         font-weight: @font__h1--font-weight;
@@ -138,12 +140,12 @@
         }
     }
 
+
     // Blog content area
     .post-content {
-        margin: 0;
 
         @media @desktop-1024px {
-        .flex(0 100%);
+            .flex(0 100%);
             padding-bottom: 0;
         }
 
@@ -156,6 +158,12 @@
 
 // Blog post content area
 .blogpost__post-content {
+    background-color: @color__container--background;
+    -webkit-box-shadow: 0px 0px 125px 0px rgba(0,0,0,0.045);
+    -moz-box-shadow: 0px 0px 125px 0px rgba(0,0,0,0.045);
+    box-shadow: 0px 0px 125px 0px rgba(0,0,0,0.045);
+    margin: 65px auto 0;
+    max-width: 1280px;
     padding: 3rem 30px 2rem;
 
     @media @desktop-1024px {
@@ -166,6 +174,12 @@
     @media @mobile-650px {
         padding: 1.5rem 25px 0;
     }
+
+
+    .post-body {
+        margin: 0 auto;
+    }
+
 
     // Make paragraph text larger for blog post content
     p {
@@ -183,6 +197,7 @@
         }
     }
 
+
     // Custom blockquote styling for blog post
     blockquote {
         color: @color__h2--text;
@@ -194,6 +209,7 @@
             padding: 35px 10px 30px;
          }
     }
+
 
     // Add additional padding to blog post images
     img {
@@ -209,7 +225,6 @@
 // Blog post footer
 .post-footer {
     margin: 0 auto;
-    max-width: 860px;
     padding: 0 30px;
     width: 100%;
 }
@@ -301,9 +316,6 @@
 
 // If image is available these styles are applied to the post content
 .blogpost .post-article > .post-image ~ .post-content {
-    padding: 80px 0 30px;
-    margin: 0 auto;
-    max-width: 860px;
 
     @media @desktop-1024px {
         padding: 60px 30px 30px;
@@ -318,7 +330,7 @@
 .blogpost {
     &__post-image {
         position: relative;
-        height: 100vh;
+        height: 95vh;
 
         @media @mobile-650px {
             height: 100vh;
@@ -328,21 +340,21 @@
     &__image-link {
         position: absolute;
         right: 0;
-        width: 55%;
+        left: 0;
     }
 }
 
 // If image is available these styles are applied to the post footer
 .blogpost .post-article > .post-image ~ .post-footer {
     .flex-display;
-    .justify-content(flex-end);
-    -ms-flex-pack: end;
+    .justify-content(flex-start);
+    -ms-flex-pack: start;
     height: 650px;
-    height: 100vh;
+    height: 95vh;
     padding: 0;
     position: absolute;
-    max-width: 55%;
     padding: 10px 25px;
+    left: 0;
     right: 0;
     top: 0;
 
@@ -397,7 +409,7 @@
     .post-category,
     .post-tags {
         display: inline-block;
-        padding: 20px 25px 10px;
+        padding: 20px 15px 10px;
 
         @media @desktop-1024px {
             padding: 10px 20px 5px 0;
@@ -463,105 +475,10 @@
 }
 
 
+[data-widget-type="blogpost"] + .template-header + .feature-scroll {
+    bottom: 3vh!important;
 
-
-// Scroll Arrow
-// ------------
-
-.scroll-arrow {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 99vh;
-    width: 45%;
-
-    @media @desktop-1024px {
-        top: 98vh;
-    }
-
-    @media @tablet-860px {
-        display: none;
-    }
-}
-
-.arrow-container {
-    border: 2px solid rgb(165, 165, 165);
-    .border-radius(100px);
-    display: inline-block;
-    height: 47px;
-    width: 48px;
-    z-index: 999;
-    .transition(all 0.35s ease-in-out);
-
-    position: absolute;
-    bottom: 25px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-
-    &:hover {
-        border-color: white;
-        color: white;
-
-        .scroll-arrow,
-        .scroll-arrow:before,
-        .scroll-arrow:after {
-            border-color: white;
-            color: white;
-        }
-
-        .arrow-down {
-            border-color: white;
-            color: white;
-        }
-    }
-}
-
-.arrow-down {
-    border-color: rgb(175, 175, 175);
-    color: rgb(175, 175, 175);
-    width: 12px;
-    height: 13px;
-    border-width: 2px 2px 0 0;
-    border-style: solid;
-    margin: 18px 16px;
-    border-radius: 0 2px 0 0;
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
-    box-sizing: border-box;
-    -webkit-transform: rotate(135deg);
-    -ms-transform: rotate(135deg);
-    transform: rotate(135deg);
-    top: 0;
-
-    &:before {
-        right: 0;
-        top: -1px;
-        width: 20px;
-        height: 2px;
-        -webkit-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-        transform: rotate(-45deg);
-        -webkit-transform-origin: right top;
-        -ms-transform-origin: right top;
-        transform-origin: right top;
-        box-shadow: inset 0 0 0 32px;
-        .border-radius(8px);
-        position: absolute;
-        content: "";
-        box-sizing: border-box;
-    }
-
-    &:after {
-        width: 2px;
-        height: 2px;
-        left: -1px;
-        top: -2px;
-        box-shadow: inset 0 0 0 32px, 11px 11px;
-        .border-radius(8px);
-        position: absolute;
-        content: "";
-        box-sizing: border-box;
+    @media @tablet {
+        display: none!important;
     }
 }

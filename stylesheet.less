@@ -91,7 +91,8 @@
 // Header
 // ---------------
 
-.template-header {
+.template-header,
+[data-widget-type="responsiveslideshow"].bk-tpl-hidden {
     background-color: @color__header--background;
     .flex-display(flex);
     .flex-wrap(wrap);
@@ -165,7 +166,7 @@
 
 // If any kind of feature section is present position the header over it
 [data-widget-type="responsiveslideshow"] + .template-header,
-.blog-page .bk-zone + .template-header,
+.blog-page [data-widget-type="blogpost"] + .template-header,
 .ecom-page .template-header {
     background-color: transparent;
     position: absolute;
@@ -175,6 +176,10 @@
 
     @media @tablet-860px {
         background-color: @color__header--background;
+    }
+
+    &:before {
+        height: 100vh;
     }
 }
 
@@ -195,6 +200,12 @@
 // Body background colour
 body {
     background-color: @color__body--background;
+
+
+    &.basket-open {
+        position: fixed;
+        width: 100%;
+    }
 }
 
 
@@ -214,7 +225,7 @@ body {
     -webkit-box-shadow: 0px 0px 125px 0px rgba(0,0,0,0.045);
     -moz-box-shadow: 0px 0px 125px 0px rgba(0,0,0,0.045);
     box-shadow: 0px 0px 125px 0px rgba(0,0,0,0.045);
-    margin: 65px auto 0;
+    margin: 75px auto 0;
     max-width: 1280px;
     overflow: hidden;
 
@@ -311,7 +322,7 @@ body {
 [data-widget-type="blogpost"],
 [data-widget-type="ecomproductslist"],
 [data-widget-type="ecomproduct"] {
-    background-color: @color__container--background;
+    background-color: @color__body--background;
 }
 
 
@@ -426,6 +437,16 @@ body {
 
     @media @tablet-860px {
         padding: 0 15px;
+    }
+}
+
+
+// Adds margin to to responsive column if first item in the zone
+[role="main"] .bk-zone [data-name="responsivecolumns"]:first-child .column {
+    margin-top: 60px;
+
+    .widget:first-child {
+        margin-top: 0;
     }
 }
 

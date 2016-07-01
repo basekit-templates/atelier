@@ -1,15 +1,39 @@
 
 // -----------------------------
-//  Home Page Scroll Arrow
+//  Home Page Styling
 // -----------------------------
 
 
+
+// Homepage feature container
 .home-page .template-feature {
     position: relative;
 }
 
 
-.feature-scroll {
+// Hide scroll arrow if feature is hidden
+.feature-scroll,
+[data-widget-type="responsiveslideshow"].bk-tpl-hidden {
+    display: none;
+}
+
+
+
+// Feature Scroll Arrow
+// ------------------------------
+
+
+// Hide scroll arrow if feature slideshow is hidden
+.feature-scroll,
+[data-widget-type="responsiveslideshow"].bk-tpl-hidden + .feature-scroll,
+[data-widget-type="blogpost"].bk-tpl-hidden + .feature-scroll {
+    display: none;
+}
+
+
+// Apply styling if slideshow is visible
+[data-widget-type="responsiveslideshow"] + .template-header + .feature-scroll,
+[data-widget-type="blogpost"] + .template-header + .feature-scroll {
     background-color: white;
     -webkit-box-shadow: 0px 0px 125px 0px rgba(0,0,0,0.035);
     -moz-box-shadow: 0px 0px 125px 0px rgba(0,0,0,0.035);
@@ -25,7 +49,7 @@
     left: 0;
     right: 0;
     .transform(rotate(225deg));
-    z-index: 10002;
+    z-index: 9999;
 
     &:hover {
         -webkit-box-shadow: 0px 0px 125px 0px rgba(0,0,0,0.075);
@@ -46,32 +70,31 @@
 
 // If either the pagination or slideshow buttons are present alone, position to acommodate
 .has-slide-navigation  [data-widget-type="responsiveslideshow"] {
-    @media @tablet-860px {
 
+
+    @media @tablet-860px {
         .responsiveslideshow__pagination-item.selected .button {
-            background-color: white!important;
-            border: 2px solid white;
+            background-color: @color__slideshow-pagination-item--background!important;
+            border: 2px solid @color__slideshow-pagination-item--background;
         }
 
         .template-feature .responsiveslideshow__button.button {
-            border: 2px solid white!important;
+            border: 2px solid @color__slideshow-pagination-item--background!important;
         }
     }
 }
 
 
 //  If the pagination and slider buttons are both present, hide the pagination on mobile
-.template-feature.hide-slide-pagination  .responsiveslideshow {
+.template-feature.hide-slide-pagination  .responsiveslideshow  &__slide-pagination {
 
 
-    &__slide-pagination {
-
-        @media @tablet-860px {
-            display: none;
-            visibility: hidden;
-        }
+    @media @tablet-860px {
+        display: none;
+        visibility: hidden;
     }
 }
+
 
 
 
@@ -97,8 +120,16 @@
 }
 
 
+// Makes basket overlay full height when opened
+.basket-open .template-feature [data-widget-type="responsiveslideshow"] {
+    height: 100vh;
+}
+
+
+
 //  Slideshow styling
 // ----------------------
+
 
 // Home slideshow styling
 .template-feature .responsiveslideshow {
@@ -204,6 +235,7 @@
         }
     }
 
+
     // Navigation controls
     &__slide-navigation {
         .flex-wrap(wrap);
@@ -216,8 +248,8 @@
         @media @tablet-860px {
             .flex-display;
             .justify-content(space-between);
-            /*background-color: @color__feature--background;
-            border-top: 1px solid darken(@color__feature--background, 8%);*/
+            background-color: @color__container--background;
+            border-top: 1px solid darken(@color__container--background, 8%);
             bottom: 20px;
             left: 25px;
             right: 25px;
@@ -265,7 +297,7 @@
         .transition(all 0.5s ease-in-out);
 
         @media @tablet-860px {
-            //border-right: 1px solid darken(@color__feature--background, 10%);
+            border-right: 1px solid darken(@color__container--background, 10%);
         }
 
         &:after {
@@ -273,7 +305,7 @@
         }
 
         &:hover:after {
-            //border-color: @color__secondary;
+            border-color: @color__link--text;
             left: 25px;
             .transition(all 0.5s ease-in-out);
         }
@@ -286,7 +318,7 @@
         .transition(all 0.5s ease-in-out);
 
         @media @tablet-860px {
-           //border-left: 1px solid darken(@color__feature--background, 10%);
+            border-left: 1px solid darken(@color__container--background, 10%);
             margin-left: 0;
         }
 
@@ -295,7 +327,7 @@
         }
 
         &:hover:after {
-            //border-color: @color__secondary;
+            border-color: @color__link--text;
             right: 25px;
             .transition(all 0.5s ease-in-out);
         }
@@ -353,23 +385,30 @@
         padding: 0;
 
         &:after {
-            background-color: white;
+            background-color: @color__slideshow-pagination-item--background;
             content: "";
             display: inline-block;
             height: 2px;
             width: 20px;
         }
     }
+
+
+    .widget-overlay {
+        z-index: 9998;
+    }
 }
+
 
 
 //  Slideshow Controls
 // ----------------------
 
+
 // Pause icon
 .icon--pause:before {
     content: "";
-    border-left: 14px solid white;
+    border-left: 14px solid @color__slideshow-pagination-item--background;
     border-right: 14px dashed transparent;
     border-top: 8px dashed transparent;
     border-bottom: 8px dashed transparent;
@@ -382,7 +421,7 @@
     height: 16px;
 
     @media @tablet-860px {
-        //border-left: 14px solid darken(@color__feature--background, 80%);
+        border-left: 14px solid darken(@color__container--background, 80%);
         border-right: 0;
         left: 0;
         top: 16px;
@@ -390,11 +429,12 @@
     }
 }
 
+
 // Play icon
 .icon--pause.pause:before {
     content: "";
-    border-left: 2px solid white;
-    border-right: 2px solid white;
+    border-left: 2px solid @color__slideshow-pagination-item--background;
+    border-right: 2px solid @color__slideshow-pagination-item--background;
     border-top: none;
     border-bottom: none;
     left: -5px;
@@ -402,7 +442,7 @@
     margin: 0 auto;
 
     @media @tablet-860px {
-        //border-color: darken(@color__feature--background, 80%);
+        border-color: darken(@color__container--background, 80%);
         border-width: 2px;
         left: 0;
     }
@@ -419,8 +459,8 @@
 
     &:after {
         content: "";
-        border-left: 2px solid white;
-        border-top: 2px solid white;
+        border-left: 2px solid @color__slideshow-pagination-item--background;
+        border-top: 2px solid @color__slideshow-pagination-item--background;
         position: absolute;
         top: 33px;
         margin: 0;
@@ -428,7 +468,7 @@
         width: 12px;
 
         @media @tablet-860px {
-            //border-color: darken(@color__feature--background, 80%);
+            border-color: darken(@color__container--background, 80%);
             border-width: 2px;
             left: 0;
             right: 0;
@@ -437,6 +477,7 @@
         }
     }
 }
+
 
 // Previous button
 .previous-button:after {
@@ -447,6 +488,7 @@
         left: 0;
     }
 }
+
 
 // Next button
 .next-button:after {

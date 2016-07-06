@@ -211,14 +211,14 @@
         },
         "form": {
             "color__form-legend--text": "@color__h3--text",
-            "color__form-label--text": "@color__p--text",
+            "color__form-label--text": "lighten(@color__p--text, 10%);",
             "color__form--background": "#ffffff"
         },
         "twitter": {
             "color__twitter--background": "#ffffff"
         },
         "socialicons": {
-            "color__socialicons--icon--background": "#1e1e1e",
+            "color__socialicons--icon--background": "#464646",
             "color__socialicons--icon": "#ffffff"
         }
     }

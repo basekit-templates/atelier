@@ -45,7 +45,7 @@
 
 @import "@{templateLocal}/stylesheets/widgets/brand.less";                  // Logo & Companyname
 @import "@{templateLocal}/stylesheets/widgets/navigation.less";             // Navigation
-@import "@{templateLocal}/stylesheets/widgets/navigation-icon.less";             // Navigation
+@import "@{templateLocal}/stylesheets/widgets/navigation-icon.less";        // Navigation Icon
 @import "@{templateLocal}/stylesheets/widgets/gallery.less";                // Gallery
 @import "@{templateLocal}/stylesheets/widgets/forms.less";                  // Forms
 @import "@{templateLocal}/stylesheets/widgets/social.less";                 // Social
@@ -95,7 +95,7 @@
 [data-widget-type="responsiveslideshow"].bk-tpl-hidden {
     background-color: @color__header--background;
     .flex-display(flex);
-    .flex-wrap(wrap);
+    .flex-wrap(nowrap);
     .align-items(center);
     margin: 0;
     padding: 35px;
@@ -134,6 +134,7 @@
     &--brand {
         margin: 0 auto;
         max-width: 65%;
+        padding: 0 10px;
         text-align: center;
         z-index: 999;
 
@@ -150,14 +151,10 @@
 
         // Stop logo becomign to large
         .logo-image {
-            max-height: 180px;
-
-            @media @tablet-860px {
-                max-height: 125px;
-            }
+            max-width: 200px;
 
             @media @mobile-650px {
-                max-height: 100px;
+                max-height: 150px;
             }
         }
     }
@@ -222,9 +219,9 @@ body {
 .ecom-page .bk-zone,
 .ecom-list-page .bk-zone {
     background-color: @color__container--background;
-    -webkit-box-shadow: 0px 0px 125px 0px rgba(0,0,0,0.045);
-    -moz-box-shadow: 0px 0px 125px 0px rgba(0,0,0,0.045);
-    box-shadow: 0px 0px 125px 0px rgba(0,0,0,0.045);
+    -webkit-box-shadow: 0px 0px 125px 0px rgba(0,0,0,0.055);
+    -moz-box-shadow: 0px 0px 125px 0px rgba(0,0,0,0.055);
+    box-shadow: 0px 0px 125px 0px rgba(0,0,0,0.055);
     margin: 75px auto 0;
     max-width: 1280px;
     overflow: hidden;
@@ -245,7 +242,7 @@ body {
     // Default widget spacing
     .widget {
         margin: 0 auto 80px;
-        max-width: 1000px;
+        max-width: 960px;
         padding: 0 30px;
 
         @media @mobile-650px {

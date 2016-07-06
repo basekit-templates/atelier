@@ -11,13 +11,6 @@
 }
 
 
-// Hide scroll arrow if feature is hidden
-.feature-scroll,
-[data-widget-type="responsiveslideshow"].bk-tpl-hidden {
-    display: none;
-}
-
-
 
 // Feature Scroll Arrow
 // ------------------------------
@@ -35,9 +28,9 @@
 [data-widget-type="responsiveslideshow"] + .template-header + .feature-scroll,
 [data-widget-type="blogpost"] + .template-header + .feature-scroll {
     background-color: white;
-    -webkit-box-shadow: 0px 0px 125px 0px rgba(0,0,0,0.035);
-    -moz-box-shadow: 0px 0px 125px 0px rgba(0,0,0,0.035);
-    box-shadow: 0px 0px 125px 0px rgba(0,0,0,0.035);
+    -webkit-box-shadow: 0px 0px 125px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 0px 125px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px 0px 125px 0px rgba(0,0,0,0.25);
     .flex-display;
     .align-items(center);
     .justify-content(center);
@@ -50,6 +43,14 @@
     right: 0;
     .transform(rotate(225deg));
     z-index: 9999;
+
+    @media @height-600px {
+        display: none;
+    }
+
+    @media @mobile-650px {
+        display: none;
+    }
 
     &:hover {
         -webkit-box-shadow: 0px 0px 125px 0px rgba(0,0,0,0.075);
@@ -395,8 +396,15 @@
 }
 
 
+// Moves overlay for homepage slideshow to clickable area
 [data-widget-type="responsiveslideshow"] .widget-overlay {
     z-index: 9998;
+
+
+    .widget__list {
+        bottom: 0!important;
+        top: initial!important;
+    }
 }
 
 

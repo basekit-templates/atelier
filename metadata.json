@@ -115,8 +115,8 @@
             "color__container--background": "#ffffff",
             "color__link--text": "#e7a022",
             "font__companyname--font-family": "@font-swatch10-font-family",
-            "font__companyname--font-size": "19px",
-            "font__companyname--line-height": "30px",
+            "font__companyname--font-size": "18px",
+            "font__companyname--line-height": "26px",
             "font__companyname--font-weight": "400",
             "font__companyname--letter-spacing": "2px",
             "color__companyname--text": "#ffffff"

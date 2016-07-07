@@ -92,7 +92,7 @@
 // ---------------
 
 .template-header,
-[data-widget-type="responsiveslideshow"].bk-tpl-hidden {
+[data-widget-type="responsiveslideshow"].bk-tpl-hidden + .template-header {
     background-color: @color__header--background;
     .flex-display(flex);
     .flex-wrap(nowrap);
@@ -169,10 +169,6 @@
     left: 0;
     right: 0;
     top: 0;
-
-    @media @tablet-860px {
-        //background-color: @color__header--background;
-    }
 
     &:before {
         height: 100vh;

@@ -18,8 +18,8 @@
 
 // Hide scroll arrow if feature slideshow is hidden
 .feature-scroll,
-[data-widget-type="responsiveslideshow"].bk-tpl-hidden + .feature-scroll,
-[data-widget-type="blogpost"].bk-tpl-hidden + .feature-scroll {
+[data-widget-type="responsiveslideshow"].bk-tpl-hidden + .template-header + .feature-scroll,
+[data-widget-type="blogpost"].bk-tpl-hidden + .template-header + .feature-scroll {
     display: none;
 }
 
@@ -366,6 +366,7 @@
             border: none;
         }
     }
+
 
     // Pagination button styles
     &__button.button {

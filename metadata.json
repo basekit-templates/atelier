@@ -220,6 +220,9 @@
         "socialicons": {
             "color__socialicons--icon--background": "#464646",
             "color__socialicons--icon": "#ffffff"
+        },
+        "ecommerce": {
+            "color__ecomproduct-price--text": "#e7a022"
         }
     }
 }

@@ -60,11 +60,11 @@
 
     &:after {
         content: "";
-        border-left: 2px solid black;
-        border-top: 2px solid black;
+        border-left: 2px solid #404040;
+        border-top: 2px solid #404040;
         margin: 0;
-        height: 14px;
-        width: 14px;
+        height: 12px;
+        width: 12px;
     }
 }
 
@@ -352,45 +352,34 @@
 
     &__slide-pagination {
         right: 0;
+        width: 45px;
     }
 
 
     // Pagination list item
     &__pagination-item {
         display: block;
-        padding: 5px 0;
+        padding: 0;
 
         &.selected button.button {
-            overflow: visible;
-            padding-left: 6px;
-            text-indent: 0;
-
-            &:after {
-                margin-left: 20px;
-                margin-right: 0;
-                width: 25px;
-            }
+            background-color: @color__slideshow-pagination-item--background;
+            border: none;
         }
     }
-
 
     // Pagination button styles
     &__button.button {
         background-color: transparent;
-        font-size: 14px;
-        .flex-display;
-        .align-items(center);
-        text-indent: -9999px;
+        border: 2px solid @color__slideshow-pagination-item--background;
+        .border-radius(100px);
         overflow: hidden;
-        margin: 0;
         padding: 0;
+        text-indent: -9999px;
+        height: 12px;
+        width: 12px;
 
-        &:after {
-            background-color: @color__slideshow-pagination-item--background;
-            content: "";
-            display: inline-block;
-            height: 2px;
-            width: 20px;
+        @media @tablet-860px {
+            border: 2px solid white;
         }
     }
 }

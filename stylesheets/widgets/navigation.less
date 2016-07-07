@@ -67,6 +67,7 @@
 
 .extendednavigation {
     margin: auto 0;
+    width: 100%;
 
 
     &__navigation-item {
@@ -147,6 +148,7 @@
 
         .item-name {
             color: @color__navigation--text;
+            .transition(all .5s ease-in-out);
 
             @media @tablet-860px {
                 font-size: bkscale(@font__navigation--font-size, 0.9);
@@ -164,6 +166,11 @@
             color: @color__navigation--text--selected;
         }
     }
+}
+
+
+.navigation-list--children .item-name {
+    color: darken(@color__navigation--text, 10%);
 }
 
 

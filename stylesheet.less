@@ -163,8 +163,7 @@
 
 // If any kind of feature section is present position the header over it
 [data-widget-type="responsiveslideshow"] + .template-header,
-.blog-page [data-widget-type="blogpost"] + .template-header,
-.ecom-page .template-header {
+.blog-page [data-widget-type="blogpost"] + .template-header {
     background-color: transparent;
     position: absolute;
     left: 0;
@@ -177,14 +176,6 @@
 
     &:before {
         height: 100vh;
-    }
-}
-
-
-// Remove absolute positioning on mobile devices for Ecom
-.ecom-page .template-header {
-    @media @tablet-860px {
-        position: relative;
     }
 }
 
@@ -222,7 +213,7 @@ body {
     -webkit-box-shadow: 0px 0px 125px 0px rgba(0,0,0,0.055);
     -moz-box-shadow: 0px 0px 125px 0px rgba(0,0,0,0.055);
     box-shadow: 0px 0px 125px 0px rgba(0,0,0,0.055);
-    margin: 75px auto 0;
+    margin: 85px auto 0;
     max-width: 1280px;
     overflow: hidden;
 

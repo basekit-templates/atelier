@@ -6,12 +6,12 @@
 <div class="blog-page">
 
 
-    <!-- Main Zone -->
-    {{widget('blogpost', 'singleblogpost', {})|raw}}
-
-
     <!-- Header -->
     {% include "includes/header.twig" %}
+
+
+    <!-- Main Zone -->
+    {{widget('blogpost', 'singleblogpost', {})|raw}}
 
 
     <!-- Smooth Scroll Arrow -->
@@ -40,8 +40,8 @@
 
     <script>
     $(document).ready(function(){
-        if ( $(".article:not(.post-article--has-image)")) {
-            $(".blog-page").addClass("no-image");
+        if ( $("article").hasClass("post-article--has-image") ) {
+            $(".blog-page").addClass("has-image");
         }
     });
     </script>

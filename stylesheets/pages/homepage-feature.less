@@ -247,22 +247,20 @@
         z-index: 9998;
 
         @media @tablet-860px {
+            -webkit-box-shadow: 0px 0px 125px 0px rgba(0,0,0,0.075);
+            -moz-box-shadow: 0px 0px 125px 0px rgba(0,0,0,0.075);
+            box-shadow: 0px 0px 125px 0px rgba(0,0,0,0.075);
             .flex-display;
             .justify-content(space-between);
             background-color: @color__container--background;
             border-top: 1px solid darken(@color__container--background, 8%);
-            bottom: 20px;
+            bottom: -20px;
             left: 25px;
             right: 25px;
             top: initial!important;
             height: 51px;
             max-width: 100%;
             width: auto;
-        }
-
-        @media @mobile-650px {
-            left: 15px;
-            right: 15px;
         }
     }
 
@@ -288,12 +286,6 @@
 
 
     // Previous slide button
-    &__pause-toggle {
-        display: none;
-    }
-
-
-    // Previous slide button
     &__previous-button {
         .transform(rotate(90deg));
         .transition(all 0.5s ease-in-out);
@@ -305,6 +297,10 @@
 
         &:after {
             left: 30px;
+
+            @media @mobile-650px {
+                left: 10px;
+            }
         }
 
         &:hover:after {
@@ -328,6 +324,10 @@
 
         &:after {
             right: 30px;
+
+            @media @mobile-650px {
+                right: 10px;
+            }
         }
 
         &:hover:after {

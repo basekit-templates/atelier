@@ -38,4 +38,12 @@
     });
     </script>
 
+    <script>
+    $(document).ready(function(){
+        if ( $(".article:not(.post-article--has-image)")) {
+            $(".blog-page").addClass("no-image");
+        }
+    });
+    </script>
+
 {% endblock %}

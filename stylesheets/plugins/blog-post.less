@@ -159,6 +159,11 @@
             padding: 6.5rem 25px 0;
         }
     }
+
+
+    .post-body {
+        padding-top: 35px;
+    }
 }
 
 
@@ -173,11 +178,12 @@
     padding: 3rem 30px 2rem;
 
     @media @desktop-1024px {
-        .flex( 0 100%);
+        .flex(0 100%);
         padding-bottom: 0;
     }
 
     @media @mobile-650px {
+        margin: 35px 25px 0;
         padding: 1.5rem 25px 0;
     }
 
@@ -185,7 +191,6 @@
     .post-body {
         margin: 0 auto;
         max-width: 750px;
-        padding-top: 35px;
 
         @media @tablet-860px {
             padding-top: 0;
@@ -234,11 +239,19 @@
 }
 
 
+// Blog post title
+.post-title {
+    text-align: center;
+}
+
+
 // Blog post footer
 .post-footer {
+    background-color: @color__container--background;
+    border-top: 1px solid @color__body--background;
     margin: 0 auto;
-    padding: 0 30px;
-    width: 100%;
+    max-width: 1280px;
+    padding: 20px;
 }
 
 

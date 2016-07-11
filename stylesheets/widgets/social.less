@@ -39,6 +39,11 @@
         // When hovering anchor link show brand colours as background
         &:hover .social-link {
 
+
+            &:before {
+                color: white;
+            }
+
             // Twitter background colour
             &.icon--twitter {
                 background-color: #55acee;
@@ -292,7 +297,7 @@
 
 
     &:before {
-        color: @color__button--text;
+        color: @color__socialicons--icon;
         font-size: 18px;
         line-height: 40px;
         margin: 0;

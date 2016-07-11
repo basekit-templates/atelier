@@ -36,13 +36,13 @@
             {% include "includes/header.twig" %}
 
 
-            <a href="#main"  class="feature-scroll"></a>
+            <a href="#main" class="feature-scroll"></a>
 
 
         </div>
 
 
-        <div role="main">
+        <div role="main" id="main">
 
             <!-- Main Zone -->
             {{zone('main')|raw}}
@@ -55,5 +55,18 @@
 
 
 </div>
+
+{% endblock %}
+
+
+{% block scripts %}
+
+    <script>
+    $(".feature-scroll").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#main").offset().top
+        }, 2000);
+    });
+    </script>
 
 {% endblock %}

@@ -167,9 +167,6 @@
         "header": {
             "color__header--background": "#1e1e1e"
         },
-        "footer": {
-            "color__footer--background": "rgba(255,255,255, 0)"
-        },
         "navigation": {
             "font__navigation--font-family": "@font-swatch6-font-family",
             "font__navigation--font-size": "28px",
@@ -180,8 +177,7 @@
             "color__navigation--text--selected": "#1e1e1e"
         },
         "slideshow": {
-            "color__slideshow--background": "rgba(0,0,0, 0)",
-            "color__slideshow-caption--background": "rgba(0,0,0, 0.25)",
+            "color__slideshow-caption--background": "rgba(0,0,0, 0.4)",
             "color__slideshow-title--text": "#ffffff",
             "color__slideshow-description--text": "#bebebe",
             "color__slideshow-pagination-item--background": "#ffffff",

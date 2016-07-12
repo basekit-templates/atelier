@@ -18,6 +18,11 @@
 body {
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+
+    @media @mobile {
+        font-size: bkscale(@font__p--font-size, 0.95);
+        line-height: bkscale(@font__p--line-height, 0.95);
+    }
 }
 
 

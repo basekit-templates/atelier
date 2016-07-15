@@ -264,13 +264,13 @@ body {
             margin-top: 0;
 
 
-            &:first-child {
+            /*&:first-child {
                 margin-top: 80px;
 
                 @media @mobile-650px {
                     margin-top: 40px;
                 }
-            }
+            }*/
         }
 
 
@@ -309,6 +309,10 @@ body {
 
             &:last-child {
                 margin-bottom: 0;
+
+                @media @mobile-650px {
+                    margin-bottom: 40px;
+                }
             }
         }
     }
@@ -346,6 +350,11 @@ body {
     &+ [data-name="socialicons"],
     &+ [data-name="ecomlegal"] {
         margin-top: -70px;
+
+
+        @media @tablet-860px {
+            margin-top: -50px;
+        }
 
         @media @mobile-650px {
             margin-top: -40px;

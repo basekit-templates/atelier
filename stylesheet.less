@@ -328,7 +328,7 @@ body {
 
 
 // Removes large spacing between some widgets when placed in a certain order
-/*[data-name="content"] {
+[data-name="content"] {
     &+ [data-name="button"],
     &+ [data-name="clicktocall"],
     &+ [data-name="content"],
@@ -336,13 +336,13 @@ body {
     &+ [data-name="paypalbuynow"],
     &+ [data-name="socialicons"],
     &+ [data-name="ecomlegal"] {
-        margin-top: -60px;
+        margin-top: -70px;
 
         @media @mobile-650px {
-            margin-top: -30px;
+            margin-top: -40px;
         }
     }
-}*/
+}
 
 
 // Stops spacer widget inheriting margin properties given to other widgets
@@ -369,11 +369,7 @@ body {
     }
 
     .widget {
-        margin-bottom: 0;
-
-        @media @mobile-650px {
-            //margin-bottom: 50px!important;
-        }
+        margin: 0;
     }
 
 

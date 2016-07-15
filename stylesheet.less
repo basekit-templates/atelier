@@ -232,18 +232,23 @@ body {
         max-width: 960px;
         padding: 0 30px;
 
-        @media @mobile-650px {
-            margin-bottom: 40px;
+        @media @tablet-860px {
+            margin-bottom: 60px;
         }
 
         @media @mobile-650px {
+            margin-bottom: 40px;
             padding: 0 20px;
         }
 
 
         // Adds spacing between first widget and header
         &:first-child {
-            margin-top: 60px;
+            margin-top: 80px;
+
+            @media @tablet-860px {
+                margin-top: 60px;
+            }
 
             @media @mobile-650px {
                 margin-top: 40px;
@@ -255,13 +260,17 @@ body {
         }
 
 
+        &[data-name="responsivecolumns"] .column .widget {
+            margin-top: 0;
+        }
+
+
         // Full width widgets
         &.widget[data-name="responsiveslideshow"],
         &.widget[data-widget-type="responsiveslideshow"],
         &.widget[data-name="youtube"],
         &.widget[data-name="map"],
         &.widget[data-name="youtube"],
-        &.widget[data-name="twitter"],
         &.widget[data-name="gallery"],
         &.widget[data-name="blogpostlist"],
         &.widget[data-widget-type="blogpostlist"],
@@ -293,14 +302,6 @@ body {
                 margin-bottom: 0;
             }
         }
-
-        &.widget[data-name="twitter"]:last-child {
-            margin-bottom: 140px;
-
-            @media @mobile-650px {
-                margin-bottom: 80px;
-            }
-        }
     }
 }
 
@@ -327,7 +328,7 @@ body {
 
 
 // Removes large spacing between some widgets when placed in a certain order
-[data-name="content"] {
+/*[data-name="content"] {
     &+ [data-name="button"],
     &+ [data-name="clicktocall"],
     &+ [data-name="content"],
@@ -341,7 +342,7 @@ body {
             margin-top: -30px;
         }
     }
-}
+}*/
 
 
 // Stops spacer widget inheriting margin properties given to other widgets
@@ -357,12 +358,21 @@ body {
 
 [role="main"] [data-name="responsivecolumns"] {
     max-width: 100%;
-    padding: 0;
+    padding: 0 15px;
 
+    @media @tablet-860px {
+        padding: 0;
+    }
+
+    @media @mobile-650px {
+        margin: 0;
+    }
 
     .widget {
+        margin-bottom: 0;
+
         @media @mobile-650px {
-            margin-bottom: 50px!important;
+            //margin-bottom: 50px!important;
         }
     }
 

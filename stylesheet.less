@@ -242,6 +242,11 @@ body {
         }
 
 
+        &[data-name="content"] {
+            margin-bottom: 20px;
+        }
+
+
         // Adds spacing between first widget and header
         &:first-child {
             margin-top: 80px;
@@ -262,15 +267,6 @@ body {
 
         &[data-name="responsivecolumns"] .column .widget {
             margin-top: 0;
-
-
-            /*&:first-child {
-                margin-top: 80px;
-
-                @media @mobile-650px {
-                    margin-top: 40px;
-                }
-            }*/
         }
 
 
@@ -317,14 +313,13 @@ body {
 
 // Extra padding for pages with scroll arrow
 .home-page [role="main"],
-.blog-page [role="main"] {
+.blog-page .post-content {
     margin-top: 85px;
 
     @media @tablet-860px {
         margin-top: 50px;
     }
 }
-
 
 
 // Background colour for main zone section
@@ -346,7 +341,6 @@ body {
     &+ [data-name="socialicons"],
     &+ [data-name="ecomlegal"] {
         margin-top: -70px;
-
 
         @media @tablet-860px {
             margin-top: -50px;

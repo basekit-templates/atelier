@@ -19,14 +19,14 @@
 // Hide scroll arrow if feature slideshow is hidden
 .feature-scroll,
 [data-widget-type="responsiveslideshow"].bk-tpl-hidden + .template-header + .feature-scroll,
-[data-widget-type="blogpost"].bk-tpl-hidden + .template-header + .feature-scroll {
+[data-widget-type="blogpost"].bk-tpl-hidden + .feature-scroll {
     display: none;
 }
 
 
 // Apply styling if slideshow is visible
 [data-widget-type="responsiveslideshow"] + .template-header + .feature-scroll,
-[data-widget-type="blogpost"] + .template-header + .feature-scroll {
+[data-widget-type="blogpost"] + .feature-scroll {
     background-color: white;
     -webkit-box-shadow: 0px 0px 125px 0px rgba(0,0,0,0.25);
     -moz-box-shadow: 0px 0px 125px 0px rgba(0,0,0,0.25);

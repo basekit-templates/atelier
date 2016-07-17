@@ -14,6 +14,7 @@ button,
 .button {
     background-color: @color__button--background;
     color: @color__button--text;
+    font-family: @font__button--font-family;
     font-size: @font__button--font-size;
     font-weight: @font__button--font-weight;
     line-height: @font__button--line-height;
@@ -24,8 +25,8 @@ button,
 
 
     &:hover {
-        background-color: darken(@color__button--background--hover, 10%);
-        color: darken(@color__button--text, 10%);
+        background-color: lighten(@color__button--background--hover, 10%);
+        color: @color__button--text;
     }
 }
 

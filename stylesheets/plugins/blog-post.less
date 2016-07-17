@@ -177,18 +177,19 @@
     max-width: 1280px;
     padding: 3rem 30px 2rem;
 
-    @media @desktop-1024px {
-        .flex(0 100%);
-        margin-left: 25px;
-        margin-right: 25px;
-        padding-bottom: 0;
+    @media only screen and (max-width: 1280px) {
+        margin: 65px 25px 0;
+    }
+
+    @media @tablet-860px {
+        margin: 45px 25px 0;
     }
 
     @media @mobile-650px {
         margin: 35px 25px 0;
         padding: 1.5rem 25px 0;
     }
-
+    
 
     .post-body {
         margin: 0 auto;

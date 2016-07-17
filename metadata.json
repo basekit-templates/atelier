@@ -151,7 +151,7 @@
             "font__p--font-weight": "400",
             "font__p--line-height": "36px",
             "font__p--letter-spacing": "0px",
-            "color__p--text": "#737373"
+            "color__p--text": "#808080"
         },
         "button": {
             "font__button--font-family": "@font-swatch7-font-family",

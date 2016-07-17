@@ -177,7 +177,7 @@
             "color__navigation--text--selected": "#1e1e1e"
         },
         "slideshow": {
-            "color__slideshow-caption--background": "rgba(0,0,0, 0.4)",
+            "color__slideshow-caption--background": "rgba(0,0,0, 0.5)",
             "color__slideshow-title--text": "#ffffff",
             "color__slideshow-description--text": "#bebebe",
             "color__slideshow-pagination-item--background": "#ffffff",

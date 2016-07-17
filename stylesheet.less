@@ -242,7 +242,13 @@ body {
         }
 
 
-        &[data-name="content"] {
+        &+ [data-name="button"],
+        &+ [data-name="clicktocall"],
+        &+ [data-name="content"],
+        &+ [data-name="dropbox"],
+        &+ [data-name="paypalbuynow"],
+        &+ [data-name="socialicons"],
+        &+ [data-name="ecomlegal"] {
             margin-bottom: 20px;
         }
 
@@ -332,7 +338,7 @@ body {
 
 
 // Removes large spacing between some widgets when placed in a certain order
-[data-name="content"] {
+/*[data-name="content"] {
     &+ [data-name="button"],
     &+ [data-name="clicktocall"],
     &+ [data-name="content"],
@@ -350,7 +356,7 @@ body {
             margin-top: -35px!important;
         }
     }
-}
+}*/
 
 
 // Stops spacer widget inheriting margin properties given to other widgets

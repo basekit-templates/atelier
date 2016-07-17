@@ -20,14 +20,8 @@
 
 
     <!-- Ecommerce Basket -->
-    {% if plugins.blog.live and plugins.ecommerce.store.live == false %}
+    {% if plugins.ecommerce.store.live == true %}
         {{widget('ecombasket', 'shopbasket', {})|raw}}
-    {% endif %}
-
-
-    <!-- Blog Search -->
-    {% if plugins.ecommerce.store.live and plugins.blog.live == false %}
-        {{widget('blogsearch', 'blogsearch', {})|raw}}
     {% endif %}
 
 

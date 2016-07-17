@@ -10,10 +10,10 @@
             <!-- Slideshow Widget -->
             {{widget('responsiveslideshow', 'slideshow', {
                 'duration':'5',
-                'transSpeed': '800',
+                'transSpeed': '1000',
                 'transType': 'fade',
                 'showButtons': false,
-                'showBullets': true,
+                'showBullets': false,
                 'allowPause': false,
                 'allowLoop': false,
                 'crop': true,
@@ -21,12 +21,16 @@
             {
                 'imageHeight':'auto',
                 'imageWidth':'100%',
-                'url':asset('images/slideshow-1.jpg')
+                'url':asset('images/slideshow-1.jpg'),
+                'title':'Lorum Ipsum Elit Dui',
+                'description': 'Aenean dui nibh fermentum id nec'
             },
             {
                 'imageHeight':'auto',
                 'imageWidth':'100%',
-                'url':asset('images/slideshow-2.jpg')
+                'url':asset('images/slideshow-2.jpg'),
+                'title':'Donec a Iaculis Felis',
+                'description': 'Curabitur efficitur condimentum nulla'
             }
 
             ]})|raw}}

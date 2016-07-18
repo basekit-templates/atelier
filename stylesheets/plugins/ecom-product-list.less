@@ -51,11 +51,11 @@
 		padding: 0 30px 25px;
 
         @media @tablet-860px {
-            max-width: 50%;
+            width: 50%;
         }
 
         @media @mobile-650px {
-            max-width: 100%;
+            width: 100%;
         }
 	}
 
@@ -154,7 +154,7 @@
     cursor: pointer;
     position: absolute;
     height: 20px;
-    right: 25px;
+    right: 45px;
     top: 78px;
     .transform(rotate(90deg));
 
@@ -341,12 +341,15 @@
 
 
     .ecomproductslist__button {
-    	background-color: transparent;
-        border-left: 1px solid gainsboro;
         color: @color__p-text;
         font-size: 12px;
         height: 52px;
+        margin-right: 1px;
         margin-top: -3px;
+
+        @media @mobile-650px {
+            margin-top: -5px;
+        }
     }
 }
 
@@ -381,6 +384,7 @@ form.ecomproductslist__form {
 
 	@media @mobile-650px {
 		display: block;
+        padding-top: 0;
 	}
 
 	// Search

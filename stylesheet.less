@@ -167,6 +167,19 @@
 }
 
 
+// Stops icon image becoming to large
+.template-header--contact {
+    max-height: 50px;
+    max-width: 50px;
+
+
+    // Moves overlay so it doesn't overlap image making the settings unreachable
+    [data-widget-type="image"] .widget__list {
+        left: -135px!important;
+    }
+}
+
+
 // If any kind of feature section is present position the header over it
 [data-widget-type="responsiveslideshow"] + .template-header,
 .blog-page.has-image .template-header {

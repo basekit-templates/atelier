@@ -39,7 +39,7 @@
         z-index: 2;
 
         @media @mobile-650px {
-            margin: 52px 12px 12px 12px;
+            .justify-content(flex-end);
         }
 
 
@@ -56,6 +56,14 @@
         margin: auto 0;
         max-width: 650px;
         width: 100%;
+
+
+        &__form {
+            @media @mobile-650px {
+                margin-bottom: 0;
+                padding: 30px 0;
+            }
+        }
 
 
         &__legend {

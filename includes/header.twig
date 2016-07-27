@@ -16,8 +16,22 @@
     </div>
 
 
-    <!-- Ecommerce Basket -->
-    {{widget('ecombasket', 'shopbasket', {})|raw}}
+    <!-- Contact Icon -->
+    <div class="template-header--contact">
+        {{widget('image', 'contact', {'src': asset("/images/contact.svg")})|raw}}
+    </div>
+
+
+    <!-- Ecommerce Basket
+    {{widget('ecombasket', 'shopbasket', {})|raw}}-->
+
+
+    <!-- Advanced Contact Form -->
+    {{widget('advancedcontactform', 'contact', {
+        'text': 'Submit',
+        'formTitle': 'Contact Us',
+        'email': 'profile'
+    })|raw}}
 
 
 </header>

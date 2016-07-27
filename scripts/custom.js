@@ -1,7 +1,19 @@
 
+
+// ---------------------------------
+// Toggles
+// ---------------------------------
+
+
 // Navigation animation toggle
 $(document).on("click", ".navigation-icon--container input", function() {
     $( "body" ).toggleClass( "navigation-open" );
+});
+
+
+// Ecom basket toggle
+$(document).on("click", ".template-header--contact", function() {
+    $( "body" ).toggleClass( "form-open" );
 });
 
 
@@ -21,6 +33,36 @@ $(document).ready(function(){
 });
 
 
+
+
+// ---------------------------------
+// Disable lightbox for contact icon
+// ---------------------------------
+
+
+bk$(function () {
+
+    bk$('.template-header--contact [rel="lightbox"]').each(
+        function () {
+            bk$(this).replaceWith('<span class="' + this.className + '">' + this.innerHTML + '</span>');
+        }
+    );
+
+    bk$('[data-lightbox]').each(
+        function () {
+            bk$(this).removeAttr('data-lightbox').css('cursor', 'default');
+            bk$(this).removeAttr('data-lightbox').css('cursor', 'default').on('click',
+                function (evt) {
+                    evt.preventDefault();
+                }
+            );
+        }
+    );
+});
+
+
+
+
 // ---------------------------------
 // Published Mode Detection
 // ---------------------------------
@@ -35,6 +77,7 @@ if($("body.edit-mode").length > 0) {
 
 
 
+
 // ---------------------------------
 // Close Everything
 // ---------------------------------
@@ -42,6 +85,7 @@ if($("body.edit-mode").length > 0) {
 
 function closeEverything() {
     $( ".widget__extendednavigation" ).removeClass( "open" );
+    $( "body" ).removeClass( "form-open" );
     $( "body, html" ).removeClass( "navigation--open" );
     $( "body, html" ).removeClass( "basket--open" );
     $( "#page-zones__template-widgets__ecombasket-shopbasket" ).removeClass( "show-content" );
@@ -56,7 +100,7 @@ function closeEverything() {
 // ---------------------------------
 
 
-if(publishedmode==true) {
+/*if(publishedmode==true) {
 
     $(document).on("click", ".ecombasket__basket-toggle", function() {
         $( "body, html" ).toggleClass( "basket-open" );
@@ -78,7 +122,7 @@ if(publishedmode==true) {
             closeEverything();
         }
     });
-}
+}*/
 
 
 

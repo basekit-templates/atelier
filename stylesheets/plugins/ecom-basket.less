@@ -6,7 +6,8 @@
 
 
 // If basket is open apply styles
-.basket-open .template-header {
+.basket-open .template-header,
+.form-open .template-header {
     position: fixed;
 
     &:before {
@@ -372,6 +373,13 @@
             background-repeat: no-repeat;
             color: @color__h2--text;
             display: block;
+        }
+    }
+
+
+    .summary-table .cell--price, .summary-table .cell--total {
+        @media @mobile-650px {
+            width: 100%!important;
         }
     }
 

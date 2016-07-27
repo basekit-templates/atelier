@@ -53,6 +53,7 @@
 @import "@{templateLocal}/stylesheets/widgets/yelp.less";                   // Yelp
 @import "@{templateLocal}/stylesheets/widgets/divider.less";                // Divider
 @import "@{templateLocal}/stylesheets/widgets/contact-form.less";           // Contact Form
+@import "@{templateLocal}/stylesheets/widgets/advanced-contact-form.less";           // Contact Form
 @import "@{templateLocal}/stylesheets/widgets/image.less";                  // Image
 @import "@{templateLocal}/stylesheets/widgets/slideshow.less";              // Slideshow
 @import "@{templateLocal}/stylesheets/widgets/widgets.less";                // Other Widgets
@@ -158,6 +159,11 @@
             }
         }
     }
+
+    // Makes sure contact icon stays above overlay
+    &--contact {
+        z-index: 999;
+    }
 }
 
 
@@ -186,7 +192,8 @@ body {
     background-color: @color__body--background;
 
 
-    &.basket-open {
+    &.basket-open,
+    &.form-open {
         position: fixed;
         width: 100%;
     }

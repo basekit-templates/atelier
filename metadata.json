@@ -4,7 +4,7 @@
     "thumbnail":"bergen.png",
     "templateType":"standard",
     "pageTypes":["home", "blogpost"],
-    "screenshot":"bergen-screenshot.jpg",
+    "screenshot":"atelier-screenshot.jpg",
     "images":[
         "images/slideshow-1.jpg",
         "images/slideshow-2.jpg"

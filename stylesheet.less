@@ -248,16 +248,16 @@ body {
 
     // Default widget spacing
     .widget {
-        margin: 0 auto 80px;
+        margin: 0 auto 50px;
         max-width: 960px;
         padding: 0 30px;
 
         @media @tablet-860px {
-            margin-bottom: 60px;
+            margin-bottom: 40px;
         }
 
         @media @mobile-650px {
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             padding: 0 20px;
         }
 
@@ -275,14 +275,14 @@ body {
 
         // Adds spacing between first widget and header
         &:first-child {
-            margin-top: 80px;
+            margin-top: 50px;
 
             @media @tablet-860px {
-                margin-top: 60px;
+                margin-top: 40px;
             }
 
             @media @mobile-650px {
-                margin-top: 40px;
+                margin-top: 30px;
             }
 
             &[data-name="responsivecolumns"] {
@@ -358,7 +358,7 @@ body {
 
 
 // Removes large spacing between some widgets when placed in a certain order
-/*[data-name="content"] {
+[data-name="content"] {
     &+ [data-name="button"],
     &+ [data-name="clicktocall"],
     &+ [data-name="content"],
@@ -366,17 +366,14 @@ body {
     &+ [data-name="paypalbuynow"],
     &+ [data-name="socialicons"],
     &+ [data-name="ecomlegal"] {
-        margin-top: -70px;
+        margin-top: -40px;
 
-        @media @tablet-860px {
-            margin-top: -50px;
-        }
 
         @media @mobile-650px {
-            margin-top: -35px!important;
+            margin-top: -30px!important;
         }
     }
-}*/
+}
 
 
 // Stops spacer widget inheriting margin properties given to other widgets

@@ -66,6 +66,13 @@
 
                 $(this).toggleClass('active');
            })
-        })
+        });
+
+
+        $(document).ready(function(){
+            if ( $(".button").hasClass("button--clear")) {
+                $("body").addClass("clear-filters");
+            }
+        });
     </script>
 {% endblock %}

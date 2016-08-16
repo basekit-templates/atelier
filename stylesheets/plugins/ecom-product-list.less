@@ -164,11 +164,11 @@
     cursor: pointer;
     position: absolute;
     height: 20px;
-    right: 45px;
+    right: 30px;
     top: 78px;
     .transform(rotate(90deg));
 
-    @media @mobile-650px {
+    @media @tablet-860px {
         right: 48px;
         top: 46px;
     }
@@ -216,6 +216,7 @@
         }
 
         @media @mobile-650px {
+            right: 45px;
             top: 50px;
         }
 
@@ -406,7 +407,7 @@
     }
 
 
-    &.open-filters {
+    &.filters-open .product-filters {
         display: none;
         visibility: hidden;
     }

@@ -36,24 +36,16 @@ $(document).ready(function(){
 
 
 // ---------------------------------
-// Disable lightbox for contact icon
+// Disable photoswipe for contact icon
 // ---------------------------------
 
 
-bk$(function () {
-
-    bk$('.template-header--contact [rel="lightbox"]').each(
+$(document).ready(function () {
+    bk$('.template-header--contact .js-pswp-image-trigger').each(
         function () {
-            bk$(this).replaceWith('<span class="' + this.className + '">' + this.innerHTML + '</span>');
-        }
-    );
-
-    bk$('[data-lightbox]').each(
-        function () {
-            bk$(this).removeAttr('data-lightbox').css('cursor', 'default');
-            bk$(this).removeAttr('data-lightbox').css('cursor', 'default').on('click',
-                function (evt) {
-                    evt.preventDefault();
+            bk$(this).removeClass('js-pswp-image-trigger').css('cursor', 'default').on('click',
+            function (evt) {
+                evt.preventDefault();
                 }
             );
         }

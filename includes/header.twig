@@ -18,16 +18,23 @@
 
     <!-- Contact Icon -->
     <div class="template-header--contact">
-        {{widget('image', 'contact', {'src': asset("/images/contact.svg")})|raw}}
+        {% if plugins.ecommerce.store.live == false %}
+            {{widget('image', 'contact', {'src': asset("/images/contact.svg")})|raw}}
+        {% endif %}
+
+        {% if plugins.ecommerce.store.live %}
+              {{widget('ecombasket', 'shopbasket', {})|raw}}
+        {% endif %}
     </div>
 
 
     <!-- Advanced Contact Form -->
-    {{widget('advancedcontactform', 'contact', {
-        'text': 'Submit',
-        'formTitle': 'Contact Us',
-        'email': 'profile'
-    })|raw}}
-
+    {% if plugins.ecommerce.store.live == false %}
+        {{widget('advancedcontactform', 'contact', {
+            'text': 'Submit',
+            'formTitle': 'Contact Us',
+            'email': 'profile'
+        })|raw}}
+    {% endif %}
 
 </header>

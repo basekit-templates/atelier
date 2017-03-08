@@ -65,7 +65,7 @@
 
 {% block scripts %}
 
-    <script>
+    <script nonce="{{ numberUsedOnce }}">
     $(".feature-scroll").click(function() {
         $('html, body').animate({
             scrollTop: $("#main").offset().top

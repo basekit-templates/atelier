@@ -30,7 +30,7 @@
 
 {% block scripts %}
 
-    <script>
+    <script nonce="{{ numberUsedOnce }}">
     $(".feature-scroll").click(function() {
         $('html, body').animate({
             scrollTop: $(".blogpost__post-content").offset().top
@@ -38,7 +38,7 @@
     });
     </script>
 
-    <script>
+    <script nonce="{{ numberUsedOnce }}">
     $(document).ready(function(){
         if ( $("article").hasClass("post-article--has-image") ) {
             $(".blog-page").addClass("has-image");

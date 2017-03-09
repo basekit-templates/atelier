@@ -77,9 +77,30 @@
 @import "@{templateLocal}/stylesheets/pages/homepage-feature.less";         // Homepage Feature
 
 
-#tdk-toolbar {
-    //display: none!important;
+// Safari tablet / mobile overides for iFrame height issue
+@media @desktop-1024px {
+
+
+    html,
+    body.touch,
+    body.touch .home-page,
+    body.touch .template-feature,
+    body.touch .template-feature [data-widget-type="responsiveslideshow"] {
+        height: 100% !important;
+    }
+
+
+    body.touch .home-page {
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        -webkit-overflow-scrolling: touch;
+    }
+
+
+    body.touch .home-page {
+        overflow: scroll;
+    }
 }
+
 
 
 

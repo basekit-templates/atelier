@@ -250,7 +250,7 @@
 
 
 // Blog post footer
-.bk-logpost .post-footer {
+.bk-blogpost .post-footer {
     background-color: @color__container--background;
     border-top: 1px solid @color__body--background;
     margin: 0 auto;
@@ -337,16 +337,17 @@
 
     button {
         background-color: transparent;
-        color: fade(@color-swatch2, 75%);
+        color: @color__p--text;
         font-size: 16px;
         min-width: initial;
         padding: 0;
         overflow: hidden;
         height: 25px;
         width: 15px;
+
         &:hover {
             background-color: transparent;
-            color: fade(@color-swatch2, 90%);
+            color: @color__p--text;
         }
     }
 }
@@ -496,13 +497,9 @@
         -ms-flex-align: flex-end;
         max-height: 55px;
         position: absolute;
-        left: 35px;
-        bottom: 15px;
+        right: 20px;
+        bottom: 8px;
 
-        @media @mobile-650px {
-            left: 20px;
-            right: 0;
-        }
 
         // Sharing buttons text colour
         button {

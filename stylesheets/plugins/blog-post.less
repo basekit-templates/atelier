@@ -250,7 +250,7 @@
 
 
 // Blog post footer
-.bk-blogpost .post-footer {
+:not(.post-article--has-image) .post-footer {
     background-color: @color__container--background;
     border-top: 1px solid @color__body--background;
     margin: 0 auto;
@@ -515,4 +515,9 @@
     @media @tablet {
         display: none!important;
     }
+}
+
+:not(.post-article--has-image)  .feature-scroll {
+    display: none;
+    visibility: hidden;
 }

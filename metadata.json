@@ -3,7 +3,7 @@
     "widgetVersion": 2,
     "thumbnail":"bergen.png",
     "templateType":"standard",
-    "pageTypes":["home", "blogpost"],
+    "pageTypes":["home"],
     "screenshot":"atelier-screenshot.jpg",
     "images":[
         "images/slideshow-1.jpg",

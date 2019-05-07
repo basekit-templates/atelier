@@ -33,6 +33,14 @@ $(document).ready(function(){
 });
 
 
+// If slideshow is present add height
+$(document).ready(function() {
+    if ( $("body.touch .template-feature .responsiveslideshow").length > 0) {
+        $(".template-feature").css("height", "92%");
+    } else {
+        $(".template-feature").css("height", "auto");
+    }
+});
 
 
 // ---------------------------------

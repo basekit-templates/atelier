@@ -9,13 +9,66 @@
 
     // Stylesheet overrides
     // -----------------------------
-
-    [role="main"] .widget[data-name="row"] {
-        margin: 0;
-        max-width: 100%;
-        padding: 0;
+    
+    
+    [role="main"],
+    .blog-page .bk-zone,
+    .blog-list-page .bk-zone,
+    .ecom-page .bk-zone,
+    .ecom-list-page .bk-zone {
+        overflow: visible;
+        
+        
+        .widget[data-name="row"],
+        .widget[data-name="row"] .widget:not([data-name="responsivecolumns"]) {
+            margin: 0;
+            max-width: 100%;
+            padding: 0;
+            
+            
+             &:first-child {
+                margin-top: 0;
+    
+                &[data-name="responsivecolumns"] {
+                    margin-top: 0!important;
+                }
+            }
+            
+            
+            &[data-name="responsivecolumns"] .column .widget {
+                margin-top: 0;
+            }
+        }
+        
+        
+        
+        .widget[data-name="row"] .widget:not([data-name="responsivecolumns"]) {
+            @media @mobile-650px {
+                padding: 0 20px!important;
+            }    
+        }
+        
+        
+        .widget[data-name="row"] [data-name="responsivecolumns"] {
+            margin: 0;
+            padding: 0 15px;
+            
+            @media @tablet-860px {
+                padding: 0;
+            }
+        }
+        
+        
+        .widget[data-name="row"] .column {
+            margin: 0 30px;
+        } 
     }
     
+    
+    [data-name="row"] .imagewidget__figure {
+        position: initial;
+    }
+
 
 
 

@@ -5,6 +5,7 @@
     "templateType":"standard",
     "pageTypes":["home"],
     "screenshot":"atelier-screenshot.jpg",
+    "versionTenCompatible": 1,
     "images":[
         "images/slideshow-1.jpg",
         "images/slideshow-2.jpg"

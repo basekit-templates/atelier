@@ -4,19 +4,20 @@
 // -----------------------------
 
 
-.ecomproductslist {
+.ecomproductslist,
+.ecomfeaturedproducts {
 
-	&__listing-header {
-		.flex-display;
-		.flex-wrap(wrap);
-	}
+    &__listing-header {
+        .flex-display;
+        .flex-wrap(wrap);
+    }
 
 
-	&_listing-title,
-	&__product-filters,
-	&__listing-order {
-		width: 100%;
-	}
+    &__listing-title,
+    &__product-filters,
+    &__listing-order {
+        width: 100%;
+    }
 
 
     // Product filters message
@@ -29,36 +30,36 @@
     }
 
 
-	&__listing-title {
-		.flex-order(2);
-		padding: 35px 30px 5px;
+    &__listing-title {
+        .flex-order(2);
+        padding: 35px 30px 5px;
 
         @media @mobile-650px {
             .flex-order(-1);
         }
-	}
+    }
 
 
-	&__listing-order {
-		.flex-order(3);
-		padding: 0 30px 30px;
+    &__listing-order {
+        .flex-order(3);
+        padding: 0 30px 30px;
 
         @media @mobile-650px {
             .flex-order(0);
             padding-bottom: 20px;
         }
-	}
+    }
 
 
-	&__product-list  {
-		.flex-display;
-		.flex-wrap(wrap);
-	}
+    &__product-list  {
+        .flex-display;
+        .flex-wrap(wrap);
+    }
 
 
-	&__product-item {
+    &__product-item {
         width: 33.33%;
-		padding: 0 30px 25px;
+        padding: 0 30px 25px;
 
         @media @tablet-860px {
             width: 50%;
@@ -67,7 +68,7 @@
         @media @mobile-650px {
             width: 100%;
         }
-	}
+    }
 
 
     &__product-content {
@@ -80,11 +81,11 @@
     }
 
 
-	&__product-item-image,
-	&__image-link {
-		line-height: 100%!important;
-		height: auto!important;
-	}
+    &__product-item-image,
+    &__image-link {
+        line-height: 100%!important;
+        height: auto!important;
+    }
 
 
     &__image.image--thumb {
@@ -284,77 +285,77 @@
 .fieldset--search {
 
 
-	.form-body {
-		position: relative;
-	}
+    .form-body {
+        position: relative;
+    }
 
 
     // Input and Button Full Width at Mobile
     .form-group {
-    	margin-bottom: 0;
+        margin-bottom: 0;
 
 
-    	&:hover {
-    		background-color: transparent;
-    	}
+        &:hover {
+            background-color: transparent;
+        }
 
 
         // Input Container
         &:first-child {
 
-			@media only screen and (max-width: 900px) {
-				width: 100%;
-			}
+            @media only screen and (max-width: 900px) {
+                width: 100%;
+            }
 
-			@media @tablet-860px {
-				width: auto;
-			}
+            @media @tablet-860px {
+                width: auto;
+            }
 
-			@media @mobile-650px {
-				margin-right: 0;
-			}
-		}
-
-
-		input {
-			font-family: @font-swatch4-font-family;
-			-webkit-appearance: none;
-			-moz-appearance: none;
-			appearance: none;
-			border-radius: 0;
-			font-size: 12px;
-			font-weight: 500;
-			height: 54px;
-			padding: 0 12px;
-			text-transform: uppercase;
-		}
+            @media @mobile-650px {
+                margin-right: 0;
+            }
+        }
 
 
-		// Button Container
+        input {
+            font-family: @font-swatch4-font-family;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border-radius: 0;
+            font-size: 12px;
+            font-weight: 500;
+            height: 54px;
+            padding: 0 12px;
+            text-transform: uppercase;
+        }
+
+
+        // Button Container
         &:last-child {
-        	margin-right: 0;
-        	position: absolute;
-        	right: 10px;
-        	top: 44px;
+            margin-right: 0;
+            position: absolute;
+            right: 10px;
+            top: 44px;
 
-        	@media @mobile-650px {
-        		right: 0;
-        	}
+            @media @mobile-650px {
+                right: 0;
+            }
         }
     }
 
 
     .button--clear {
-    	background: #B83838 image('/images/cancel-icon.png') no-repeat center;
-    	height: 54px;
-    	width: 55px;
-    	white-space: nowrap;
-    	text-indent: -99999px;
+        background: #B83838 image('/images/cancel-icon.png') no-repeat center;
+        height: 54px;
+        width: 55px;
+        white-space: nowrap;
+        text-indent: -99999px;
 
 
-    	&:hover {
-    		background-color: darken(#B83838, 10%);
-    	}
+        &:hover {
+            background-color: darken(#B83838, 10%);
+        }
     }
 
 
@@ -374,11 +375,11 @@
 
 // Keep Search Inputs and Button inline at Mobile
 .product-filters .fieldset--search {
-	.form-body {
-		@media @mobile-650px {
-			.flex-wrap(nowrap);
-		}
-	}
+    .form-body {
+        @media @mobile-650px {
+            .flex-wrap(nowrap);
+        }
+    }
 }
 
 
@@ -457,33 +458,33 @@
 
 // Form Container
 form.ecomproductslist__form {
-	.flex-display;
-	.justify-content(space-between);
+    .flex-display;
+    .justify-content(space-between);
     padding: 35px 30px 30px;
 
-	@media @mobile-650px {
-		display: block;
+    @media @mobile-650px {
+        display: block;
         padding-top: 0;
-	}
+    }
 
-	// Search
-	.fieldset--search {
+    // Search
+    .fieldset--search {
         border: 0;
-		.flex(0 1 auto);
-		min-width: 25%;
+        .flex(0 1 auto);
+        min-width: 25%;
 
-		@media only screen and (max-width: 900px) {
-			padding: 0 0 15px 0;
-		}
+        @media only screen and (max-width: 900px) {
+            padding: 0 0 15px 0;
+        }
 
         @media @tablet-860px {
             min-width: 35%;
         }
-	}
+    }
 
-	.fieldset--filters {
-		.flex(1 1 auto);
-	}
+    .fieldset--filters {
+        .flex(1 1 auto);
+    }
 }
 
 // Product Filters
@@ -496,51 +497,51 @@ form.ecomproductslist__form {
     transition: all 0.35s ease-in-out, max-height 0.25s ease-in-out;
     visibility: hidden;
 
-	// Legend
-	legend {
-		display: none;
-	}
+    // Legend
+    legend {
+        display: none;
+    }
 
     // Labels
     .ecomproductslist__label {
-    	font-size: 11px;
+        font-size: 11px;
     }
 
     .form-group {
-    	display: block;
+        display: block;
     }
 
     // Filters
     .fieldset--filters {
 
-    	.form-body {
-    		.flex-display;
-    		.justify-content(space-between);
+        .form-body {
+            .flex-display;
+            .justify-content(space-between);
 
-    		@media @mobile-650px {
-    			display: block;
-    		}
-    	}
+            @media @mobile-650px {
+                display: block;
+            }
+        }
 
         .form-group {
             .flex(1 1 auto);
 
             @media @mobile-650px {
-    			display: block;
-            	margin-right: 0;
+                display: block;
+                margin-right: 0;
                 width: 100%;
             }
 
             &:last-child {
-            	margin-right: 0;
+                margin-right: 0;
             }
         }
         select {
-        	padding-right: 35px;
+            padding-right: 35px;
             width: 100%;
 
             @media @mobile-650px {
-            	padding-right: 0;
+                padding-right: 0;
             }
         }
     }
@@ -578,4 +579,3 @@ form.ecomproductslist__form {
         width: 100%;
     }
 }
-

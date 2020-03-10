@@ -10,6 +10,12 @@
     @media @mobile-650px {
         padding: 25px;
     }
+    
+    
+    [data-name="responsivecolumns"] .column & {
+        padding-left: 0;
+        padding-right: 0;
+    }
 
 
     &__post-items {
@@ -43,6 +49,11 @@
 
         &:nth-child(2n) {
             padding-right: 0;
+        }
+        
+        
+        [data-name="responsivecolumns"] .column & {
+            padding-right: 0!important;
         }
     }
 

@@ -9,110 +9,102 @@
 
     // Stylesheet overrides
     // -----------------------------
-    
-    
-    [role="main"],
-    .blog-page .bk-zone,
-    .blog-list-page .bk-zone,
-    .ecom-page .bk-zone,
-    .ecom-list-page .bk-zone {
+
+
+    // Hide header in section move mode
+    .is-move-mode .template-header {
+        display: none;
+    }
+
+
+    // Fixes broken header on the single blog page
+    &.edit .blog-page.has-image .template-header {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: ~"calc(100% - 200px)";
+    }
+
+
+    // Removes section UI background colour
+    &:not(.row-add-mode) .row-overlay:after,
+    &:not(.row-add-mode) .row-overlay:before {
+        background: none;
+    }
+
+
+    // Fixes section UI not being visible
+    &.edit #page-zones__main {
         overflow: visible;
+    }
+
+
+     // Fixes editor positoning issue with the form / navigation and basket overlays
+    &.edit {
         
-        
-        .widget[data-name="row"],
-        .widget[data-name="row"] .widget:not([data-name="responsivecolumns"]) {
-            margin: 0;
-            max-width: 100%;
+        &.navigation-open [data-widget-type="extendednavigation"],
+        &.basket-open,
+        &.form-open {
+            left: 100px;
+        }
+
+        &.navigation-open .navigation-icon--container {
+            left: 135px;
+        }
+    }
+
+
+    // Section specific overides
+    [data-name="row"] {
+
+
+        // Fixes issue with the positoning for images breaking inside sections
+        .imagewidget__figure {
+            display: block;
+            position: initial;
+        }
+
+
+        // Removes extra spacing from plugins
+        .blogpostlist,
+        .ecomproduct__product-content {
             padding: 0;
             
-            
-             &:first-child {
-                margin-top: 0;
-    
-                &[data-name="responsivecolumns"] {
-                    margin-top: 0!important;
-                }
-            }
-            
-            
-            &[data-name="responsivecolumns"] .column .widget {
-                margin-top: 0;
-            }
-        }
-        
-        
-        
-        .widget[data-name="row"] .widget:not([data-name="responsivecolumns"]) {
             @media @mobile-650px {
-                padding: 0 20px!important;
-            }    
-        }
-        
-        
-        .widget[data-name="row"] [data-name="responsivecolumns"] {
-            margin: 0;
-            padding: 0 15px;
-            
-            @media @tablet-860px {
                 padding: 0;
             }
         }
-        
-        
-        .widget[data-name="row"] .column {
-            margin: 0 30px;
-        } 
-    }
-    
-    
-    [data-name="row"] .imagewidget__figure {
-        position: initial;
-    }
+
+        .ecomproductslist__product-item,
+        .ecomfeaturedproducts__product-item,
+        .ecomproductslist__listing-title,
+        .ecomfeaturedproducts__listing-title {
+            padding-left: 0;
+            padding-right: 0;
+        }
 
 
-
-
-    // Migration styles
-    // -----------------------------
-    
-    
-    // Applies spacing to widgets to mimic container width
-    .empty-zone,
-    #page-zones__main:empty,
-    #page-zones__main > .widget:not([data-name="row"]),
-    .row:not(.row--width-no-padding) .row__container {
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 960px;
-        width: 100%;
-    }
-    
-
-    // Adds spacing to a section when a widget follows it
-    #page-zones__main > [data-name="row"] + .widget:not([data-name="row"]),
-    #page-zones__main > .widget:not([data-name="row"]) + [data-name="row"]:not(:last-child),
-    &.edit #page-zones__main-overlay + .widget:not([data-name="row"]),
-    #page-zones__main > .widget:not([data-name="row"]):first-child {
-        margin-top: 50px;
-    }
-    
-    
-    // Move spacing to last widget in the main zone (not sections)
-    #page-zones__main > .widget:not([data-name="row"]):first-child {
-        margin-top: 5em;
-        
-        @media @mobile {
-            margin-top: 2em;
+        // Offset productlist spacing added by row container
+        [data-name="ecomproductslist"] {
+            margin-top: -50px;
+            
+            @media @mobile-650px {
+                margin-top: -35px;
+            }
         }
     }
 
     
-    // Move spacing to last widget in the main zone (not sections)
-    #page-zones__main > .widget:not([data-name="row"]):last-child {
-        margin-bottom: 5em;
+    // Ecom product list page overides when inside a section
+    .ecom-list-page [data-name="row"] [data-name="ecomproductlist"] {
         
-        @media @mobile {
-            margin-bottom: 2em;
+        .row__container {
+            padding: 0;
+            width: 100%;
+        }
+        
+        .ecomproductslist__listing-order {
+            padding-left: 30px;
+            padding-right: 30px;
         }
     }
 }

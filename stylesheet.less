@@ -82,20 +82,20 @@
 
 
     html,
-    body.touch:not(.row-editing),
-    body.touch:not(.row-editing) .home-page,
-    body.touch:not(.row-editing) .template-feature [data-widget-type="responsiveslideshow"] {
+    body.edit.touch:not(.row-editing),
+    body.edit.touch:not(.row-editing) .home-page,
+    body.edit.touch:not(.row-editing) .template-feature [data-widget-type="responsiveslideshow"] {
         height: 100% !important;
     }
 
 
-    body.touch .home-page {
+    body.edit.touch .home-page {
         -ms-overflow-style: -ms-autohiding-scrollbar;
         -webkit-overflow-scrolling: touch;
     }
 
 
-    body.touch .home-page {
+    body.edit.touch .home-page {
         overflow: scroll;
     }
 }
@@ -546,7 +546,7 @@ body {
 
 
 .bk-footer {
-    padding: 30px 0;
+    padding: 30px 25px;
     text-align: center;
 
 

@@ -28,7 +28,7 @@
     }
 
 
-    &_form-group {
+    &__form-group {
         margin-bottom: 20px;
     }
 
@@ -39,12 +39,6 @@
         margin-bottom: 25px;
         text-align: center;
         width: 100%;
-    }
-
-
-    &__input,
-    &__textarea {
-        background-color: white!important;
     }
 
 
@@ -86,10 +80,10 @@
     }
 
     &__select {
-        background-color: white;
-        border: 1px solid #ddd;
+        background-color: @color__form--background;
+        border: 1px solid darken(@color__form--background, 12%);
+        color: contrast(@color__form--background, #0c0d0e, #fff);
     }
-
 }
 
 
